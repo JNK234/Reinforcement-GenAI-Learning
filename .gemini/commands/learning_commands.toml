@@ -1,0 +1,190 @@
+# Learning Management Custom Commands for Gemini CLI
+# Based on CUSTOM_COMMANDS_REFERENCE.md
+# Streamlined Learning Management for Reinforcement Learning & GenAI Journey
+
+[commands]
+
+# Core Learning Commands
+[commands.add-resource]
+name = "add-resource"
+aliases = ["ar"]
+description = "Add new learning material to roadmap"
+usage = "/add-resource [type] [url/details]"
+parameters = [
+    { name = "type", type = "string", required = true, options = ["course", "paper", "video", "book", "blog"] },
+    { name = "url", type = "string", required = true },
+    { name = "description", type = "string", required = false }
+]
+action = "analyze_content_and_update_roadmap"
+example = "/add-resource paper https://arxiv.org/abs/2305.18290 'DPO: Direct Preference Optimization'"
+
+[commands.plan-sprint]
+name = "plan-sprint"
+aliases = ["ps"]
+description = "Generate next learning sprint"
+usage = "/plan-sprint [duration]"
+parameters = [
+    { name = "duration", type = "string", required = false, default = "2-week", options = ["1-week", "2-week"] }
+]
+action = "create_session_schedule_and_prepare_materials"
+example = "/plan-sprint 2-week"
+
+[commands.session-prep]
+name = "session-prep"
+aliases = ["sp"]
+description = "Prepare for learning session"
+usage = "/session-prep [cluster-id]"
+parameters = [
+    { name = "cluster_id", type = "string", required = true, pattern = "\\d+\\.\\d+" }
+]
+action = "list_materials_and_provide_knowledge_forge_prompts"
+example = "/session-prep 1.2"
+
+[commands.session-complete]
+name = "session-complete"
+aliases = ["sc"]
+description = "Wrap up learning session"
+usage = "/session-complete [cluster-id] [confidence]"
+parameters = [
+    { name = "cluster_id", type = "string", required = true, pattern = "\\d+\\.\\d+" },
+    { name = "confidence", type = "string", required = true, options = ["low", "medium", "high", "mastered"] }
+]
+action = "update_progress_and_identify_gaps"
+example = "/session-complete 1.2 high"
+
+[commands.progress]
+name = "progress"
+aliases = ["p"]
+description = "Check learning progress"
+usage = "/progress [view]"
+parameters = [
+    { name = "view", type = "string", required = false, default = "summary", options = ["summary", "detailed", "timeline"] }
+]
+action = "show_clusters_completed_and_next_steps"
+example = "/progress detailed"
+
+# Specialized Commands
+[commands.blog-ready]
+name = "blog-ready"
+aliases = ["br"]
+description = "Check if ready for blogging"
+usage = "/blog-ready [cluster-id]"
+parameters = [
+    { name = "cluster_id", type = "string", required = true, pattern = "\\d+\\.\\d+" }
+]
+action = "verify_topic_coverage_and_suggest_blog_scope"
+example = "/blog-ready 1.3"
+
+[commands.forge-ready]
+name = "forge-ready"
+aliases = ["fr"]
+description = "Get NotebookLM session materials"
+usage = "/forge-ready [cluster-id]"
+parameters = [
+    { name = "cluster_id", type = "string", required = true, pattern = "\\d+\\.\\d+" }
+]
+action = "list_upload_materials_and_provide_prompts"
+example = "/forge-ready 2.1"
+
+[commands.sprint-adjust]
+name = "sprint-adjust"
+description = "Modify current sprint"
+usage = "/sprint-adjust [reason]"
+parameters = [
+    { name = "reason", type = "string", required = true, options = ["behind", "ahead", "new-priority", "time-constraint"] }
+]
+action = "redistribute_topics_and_adjust_timeline"
+example = "/sprint-adjust behind"
+
+[commands.milestone-check]
+name = "milestone-check"
+description = "Verify readiness for advanced topics"
+usage = "/milestone-check [target]"
+parameters = [
+    { name = "target", type = "string", required = true, options = ["deep-rl", "transformers", "rlhf", "research"] }
+]
+action = "check_prerequisites_and_assess_confidence"
+example = "/milestone-check deep-rl"
+
+# Advanced Commands
+[commands.learning-path]
+name = "learning-path"
+description = "Show path to specific goal"
+usage = "/learning-path [goal]"
+parameters = [
+    { name = "goal", type = "string", required = true }
+]
+action = "map_required_clusters_and_estimate_timeline"
+example = "/learning-path 'implement PPO from scratch'"
+
+[commands.review-schedule]
+name = "review-schedule"
+description = "Generate spaced repetition schedule"
+usage = "/review-schedule"
+action = "identify_topics_needing_review_based_on_completion_dates"
+
+[commands.sync-progress]
+name = "sync-progress"
+description = "Align all tracking documents"
+usage = "/sync-progress"
+action = "update_master_roadmap_and_refresh_sprint_planner"
+
+# Configuration and Meta Commands
+[commands.set-context]
+name = "set-context"
+description = "Set learning context and preferences"
+usage = "/set-context [focus-area] [learning-style]"
+parameters = [
+    { name = "focus_area", type = "string", required = true, options = ["reinforcement-learning", "generative-ai", "transformers", "rlhf", "general"] },
+    { name = "learning_style", type = "string", required = false, options = ["visual", "hands-on", "theoretical", "mixed"] }
+]
+action = "update_agent_context_and_preferences"
+
+[commands.workspace-status]
+name = "workspace-status"
+description = "Show current workspace and learning environment status"
+usage = "/workspace-status"
+action = "display_current_files_progress_and_environment_info"
+
+# File Management Commands
+[commands.organize-notes]
+name = "organize-notes"
+description = "Organize and structure learning notes"
+usage = "/organize-notes [cluster-id]"
+parameters = [
+    { name = "cluster_id", type = "string", required = false }
+]
+action = "structure_notes_and_create_knowledge_links"
+
+[commands.export-knowledge]
+name = "export-knowledge"
+description = "Export knowledge in various formats"
+usage = "/export-knowledge [format] [topic]"
+parameters = [
+    { name = "format", type = "string", required = true, options = ["markdown", "pdf", "notion", "obsidian"] },
+    { name = "topic", type = "string", required = false }
+]
+action = "export_structured_knowledge_in_specified_format"
+
+# Settings and Configuration
+[settings]
+default_cluster_pattern = "\\d+\\.\\d+"
+learning_session_duration = 120  # minutes
+break_duration = 15  # minutes
+max_daily_clusters = 3
+confidence_threshold_for_blog = "high"
+spaced_repetition_intervals = [1, 3, 7, 14, 30]  # days
+
+[workspace]
+root_directory = "."
+roadmap_file = "MASTER_LEARNING_ROADMAP.md"
+sprint_file = "SPRINT_PLANNER.md"
+knowledge_forge_prompts = "KNOWLEDGE_FORGE_PROMPTS.md"
+living_resources = "LIVING_RESOURCES.md"
+custom_commands = "CUSTOM_COMMANDS_REFERENCE.md"
+
+[integrations]
+notebook_lm = true
+obsidian = false
+notion = false
+anki = false 
