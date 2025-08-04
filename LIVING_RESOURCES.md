@@ -1,5 +1,5 @@
 # Living Resources Document - RL & GenAI Mastery
-*Last Updated: 2025-07-25*
+*Last Updated: 2025-08-03*
 
 > 📌 **This is a living document**: Add new resources as you discover them. Star (⭐) the most valuable ones.
 
@@ -85,10 +85,15 @@
 - **Type**: Tutorial + Code
 - **Topics**: Key algorithms, Implementations in PyTorch/TensorFlow
 
-#### Hugging Face Deep RL Course
-- **Website**: https://huggingface.co/learn/deep-rl-course/unit0/introduction
-- **Type**: Free course with hands-on projects
-- **Topics**: Q-Learning to PPO, Unity ML-Agents
+#### ⭐ Hugging Face Deep RL Course
+- **Website**: https://huggingface.co/learn/deep-rl-course/en/unit0/introduction
+- **Type**: Free comprehensive course with hands-on projects
+- **Topics**: Q-Learning to PPO, Unity ML-Agents, Multi-Agent RL
+- **Time**: 24-32 hours (3-4 hours/week per unit)
+- **Difficulty**: Beginner to expert progression
+- **Practical Focus**: 8 environments, certification available
+- **Libraries**: Stable Baselines3, CleanRL integration
+> 💡 **Added 2025-08-03**: Excellent practical complement to academic materials. Could serve as alternative primary track for implementation-focused learners.
 
 #### Deep RL Bootcamp (Berkeley 2017)
 - **Videos**: [YouTube Playlist](https://www.youtube.com/playlist?list=PLNvtBXW0ijMRjh5_xKYjXHLuVMkdBPAdC)

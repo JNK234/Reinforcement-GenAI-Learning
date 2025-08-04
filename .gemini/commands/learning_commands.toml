@@ -169,7 +169,7 @@ action = "export_structured_knowledge_in_specified_format"
 # Settings and Configuration
 [settings]
 default_cluster_pattern = "\\d+\\.\\d+"
-learning_session_duration = 120  # minutes
+learning_session_duration = 150  # minutes (2.5 hours as per sprint planner)
 break_duration = 15  # minutes
 max_daily_clusters = 3
 confidence_threshold_for_blog = "high"
@@ -180,11 +180,37 @@ root_directory = "."
 roadmap_file = "MASTER_LEARNING_ROADMAP.md"
 sprint_file = "SPRINT_PLANNER.md"
 knowledge_forge_prompts = "KNOWLEDGE_FORGE_PROMPTS.md"
+knowledge_forge_toolkit = "KNOWLEDGE_FORGE_TOOLKIT.md"
 living_resources = "LIVING_RESOURCES.md"
 custom_commands = "CUSTOM_COMMANDS_REFERENCE.md"
+gemini_config = "GEMINI.md"
+logs_directory = "logs/"
+tasks_directory = "tasks/"
+session_logs_pattern = "logs/session-{cluster_id}-{date}.md"
+brainstorm_logs = "logs/brainstorm-session-*.md"
 
 [integrations]
 notebook_lm = true
-obsidian = false
+obsidian = true
 notion = false
-anki = false 
+anki = false
+youtube_transcripts = true
+arxiv_papers = true
+github_repos = true
+
+[learning_system]
+methodology = "Knowledge_Forge_3_Phase"
+total_clusters = 24
+current_sprint = 1
+target_blogs_per_sprint = 4
+session_structure = "30min_prep + 90min_forge + 30min_notes + 30min_blog_outline"
+dual_edition_output = true  # Scientist & Manager perspectives
+
+[phase_mapping]
+phase_1 = "RL_Foundations"  # Clusters 1.1-1.4
+phase_2 = "Model_Free_Methods"  # Clusters 2.1-2.4
+phase_3 = "Deep_RL_Foundations"  # Clusters 3.1-3.3
+phase_4 = "Policy_Gradient_Methods"  # Clusters 4.1-4.4
+phase_5 = "Transformer_Foundations"  # Clusters 5.1-5.4
+phase_6 = "RLHF_Alignment"  # Clusters 6.1-6.4
+phase_7 = "Advanced_Topics"  # Clusters 7.1-7.2 

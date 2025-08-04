@@ -1,0 +1,132 @@
+# RL & GenAI Learning Management Commands
+# Essential commands for managing your learning journey
+
+[add-resource]
+command = """
+echo "📚 Adding new learning resource..."
+echo "Resource: $1"
+echo "Type: ${2:-unknown}"
+echo "URL: ${3:-N/A}"
+
+# Add resource to LIVING_RESOURCES.md with timestamp
+echo "## $(date '+%Y-%m-%d'): $1" >> LIVING_RESOURCES.md
+echo "**Type**: ${2:-unknown}" >> LIVING_RESOURCES.md
+echo "**URL**: ${3:-N/A}" >> LIVING_RESOURCES.md
+echo "**Status**: 📥 New - Needs Review" >> LIVING_RESOURCES.md
+echo "" >> LIVING_RESOURCES.md
+
+echo "✅ Resource added to LIVING_RESOURCES.md"
+echo "💡 Next: Review MASTER_LEARNING_ROADMAP.md to suggest placement"
+"""
+
+[session-prep]
+command = """
+echo "🎯 Preparing for learning session..."
+CLUSTER_ID="$1"
+
+if [ -z "$CLUSTER_ID" ]; then
+    echo "❌ Please specify cluster ID (e.g., 1.2)"
+    exit 1
+fi
+
+echo "Session Target: Cluster $CLUSTER_ID"
+echo ""
+echo "📋 Pre-Session Checklist:"
+echo "  □ Materials downloaded and organized"
+echo "  □ Previous session notes reviewed"
+echo "  □ NotebookLM ready for upload"
+echo "  □ 2.5 hour time block protected"
+echo "  □ Knowledge Forge prompts ready"
+echo ""
+echo "📚 Check SPRINT_PLANNER.md for specific materials list"
+echo "🔧 Check KNOWLEDGE_FORGE_PROMPTS.md for session prompts"
+"""
+
+[session-complete]
+command = """
+echo "✅ Completing learning session..."
+CLUSTER_ID="$1"
+CONFIDENCE="${2:-medium}"
+
+if [ -z "$CLUSTER_ID" ]; then
+    echo "❌ Please specify cluster ID and confidence level"
+    echo "Usage: session-complete 1.2 high"
+    exit 1
+fi
+
+echo "Session: Cluster $CLUSTER_ID completed with $CONFIDENCE confidence"
+echo ""
+echo "📝 Post-Session Actions:"
+echo "  □ Update cluster status in MASTER_LEARNING_ROADMAP.md"
+echo "  □ Create atomic notes in your system"
+echo "  □ Blog outline created/refined"
+echo "  □ Identify any follow-up questions"
+echo "  □ Next session materials prepared"
+echo ""
+echo "💡 Next: Consider running 'blog-ready $CLUSTER_ID' to check blog readiness"
+"""
+
+[progress]
+command = """
+echo "📊 Learning Progress Dashboard"
+echo "================================"
+
+# Count completed clusters (looking for ✓ in MASTER_LEARNING_ROADMAP.md)
+COMPLETED=$(grep -c "✓.*Completed" MASTER_LEARNING_ROADMAP.md 2>/dev/null || echo "0")
+TOTAL_CLUSTERS=24
+
+echo "Clusters Completed: $COMPLETED/$TOTAL_CLUSTERS"
+echo "Current Phase: RL Foundations" # This would be dynamic in a full implementation
+echo ""
+echo "📖 Current Sprint Status:"
+cat SPRINT_PLANNER.md | grep -A 5 "Current Sprint:" | head -6
+echo ""
+echo "🎯 Next Actions:"
+echo "  • Check SPRINT_PLANNER.md for upcoming sessions"
+echo "  • Review MASTER_LEARNING_ROADMAP.md for progress"
+echo "  • Use 'session-prep [cluster-id]' to prepare for next session"
+"""
+
+[blog-ready]
+command = """
+echo "📝 Blog Readiness Check..."
+CLUSTER_ID="$1"
+
+if [ -z "$CLUSTER_ID" ]; then
+    echo "❌ Please specify cluster ID (e.g., 1.2)"
+    exit 1
+fi
+
+echo "Checking blog readiness for Cluster $CLUSTER_ID"
+echo ""
+echo "📋 Blog Readiness Checklist:"
+echo "  □ Cluster learning session completed"
+echo "  □ Atomic notes created and organized"
+echo "  □ Key concepts clearly understood"
+echo "  □ Blog outline prepared"
+echo "  □ Target audience identified (Scientist/Manager edition)"
+echo ""
+echo "💡 Check MASTER_LEARNING_ROADMAP.md for blog scope and topics"
+echo "📚 Refer to completed session notes for content"
+"""
+
+[plan-sprint]
+command = """
+echo "🗓️ Planning new learning sprint..."
+DURATION="${1:-2-week}"
+
+echo "Sprint Duration: $DURATION"
+echo ""
+echo "📋 Sprint Planning Steps:"
+echo "  1. Review current progress in MASTER_LEARNING_ROADMAP.md"
+echo "  2. Select 4 clusters for the sprint"
+echo "  3. Update SPRINT_PLANNER.md with:"
+echo "     - Sprint dates and focus"
+echo "     - Session schedule (4 sessions)"
+echo "     - Materials lists for each session"
+echo "     - Blog output targets"
+echo "  4. Set up session prep checklist"
+echo ""
+echo "💡 Current template in SPRINT_PLANNER.md shows the format"
+echo "🎯 Target: 4 clusters → 4 blog posts per sprint"
+"""

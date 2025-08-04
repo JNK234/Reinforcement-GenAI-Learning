@@ -37,11 +37,18 @@
 **🎯 Target**: Cluster 1.2 - Markov Decision Processes (MDP)  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [CS234 Lecture 2](https://web.stanford.edu/class/cs234/slides/cs234_lecture2.pdf) - Complete MDP theory
-- ⭐ [Sutton & Barto Chapter 3](http://incompleteideas.net/book/RLbook2020.pdf#page=65) - Mathematical rigor (Pages 47-88)
-- 🎥 [David Silver Lecture 2](https://www.youtube.com/watch?v=lfHX2hHRMVQ&list=PLqYmG7hTraZBKeNJ-JE_eyJHZ7XgBoAyb) - MDP Formalism (1h 37m)
-- 🎯 [Interactive MDP Examples](https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html) - Gridworld visualization
-- 📚 [Berkeley CS188 MDP Notes](https://inst.eecs.berkeley.edu/~cs188/sp20/assets/notes/n6.pdf) - Alternative perspective
+**Primary Resources**:
+
+- ⭐ [CS234 Lecture 2](https://web.stanford.edu/class/cs234/slides/cs234_lecture2.pdf), [CS285 Lecture 2](https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-2.pdf), [Sutton & Barto Ch 3](http://incompleteideas.net/book/RLbook2020.pdf#page=65)
+
+**Theory & Mathematics**:
+
+- [Szepesvári RL Algorithms](https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf), [RL Theory Book](https://rltheorybook.github.io/), [Bertsekas DP](http://www.athenasc.com/dpchapter.pdf)
+
+**Videos & Interactive**:
+
+- 🎥 [David Silver Lecture 2](https://www.youtube.com/watch?v=lfHX2hHRMVQ&list=PLqYmG7hTraZBKeNJ-JE_eyJHZ7XgBoAyb), [MIT 6.034 Lectures](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lectures/)
+- 🎯 [Interactive MDP Examples](https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html), [Berkeley CS188 MDP Notes](https://inst.eecs.berkeley.edu/~cs188/sp20/assets/notes/n6.pdf)
 
 **⏰ Time Allocation**:
 
@@ -69,11 +76,18 @@
 **🎯 Target**: Cluster 1.3 - Bellman Equations  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [CS234 Lecture 2 - Bellman Section](https://web.stanford.edu/class/cs234/slides/cs234_lecture2.pdf) - Derivations
-- ⭐ [Sutton & Barto Chapter 3.5-3.8](http://incompleteideas.net/book/RLbook2020.pdf#page=75) - Mathematical depth (Pages 58-75)
-- 🎥 [David Silver Lecture 2 - Bellman](https://www.youtube.com/watch?v=lfHX2hHRMVQ&t=2400s) - Timestamped to Bellman section
-- 🎯 [Interactive Bellman Demo](https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html) - See equations in action
-- 📚 [MIT 6.034 Bellman Notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lectures/) - Clear derivations
+**Primary Resources**:
+
+- ⭐ [CS234 Lecture 3](https://web.stanford.edu/class/cs234/slides/cs234_lecture3.pdf), [Sutton & Barto Ch 3.5-3.8](http://incompleteideas.net/book/RLbook2020.pdf#page=75), [CS285 Value Functions](https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-3.pdf)
+
+**Mathematical Theory**:
+
+- [Szepesvári RL Algorithms Ch 2](https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf), [RL Theory Book Ch 2](https://rltheorybook.github.io/), [Bertsekas DP Vol 1](http://www.athenasc.com/dpbook.html)
+
+**Videos & Implementations**:
+
+- 🎥 [David Silver Lecture 2-3](https://www.youtube.com/watch?v=lfHX2hHRMVQ&list=PLqYmG7hTraZBKeNJ-JE_eyJHZ7XgBoAyb), [MIT 18.06 Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
+- 🎯 [Interactive Bellman Demo](https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html), [CleanRL Examples](https://github.com/vwxyzjn/cleanrl)
 
 **⏰ Time Allocation**:
 
@@ -91,8 +105,8 @@
 
 **🔧 Mathematical Focus**:
 
-- V*(s) = max_a Σ p(s'|s,a)[r + γV*(s')]
-- Q*(s,a) = Σ p(s'|s,a)[r + γ max_a' Q*(s',a')]
+- V\*(s) = max_a Σ p(s'|s,a)\[r + γV\*(s')\]
+- Q\*(s,a) = Σ p(s'|s,a)\[r + γ max_a' Q\*(s',a')\]
 - Why these equations guarantee optimality
 
 ---
@@ -101,11 +115,21 @@
 **🎯 Target**: Cluster 1.4 - Dynamic Programming + Cluster 2.3 - Q-Learning Implementation  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [CS234 Lecture 3](https://web.stanford.edu/class/cs234/slides/cs234_lecture3.pdf) - Algorithm details
-- ⭐ [Sutton & Barto Chapter 4](http://incompleteideas.net/book/RLbook2020.pdf#page=89) - Theoretical foundations (Pages 75-108)
-- ⭐ [Original Q-Learning Paper](https://link.springer.com/content/pdf/10.1007/BF00992698.pdf) - Historical foundation
-- 🛠️ [HuggingFace Deep RL Units 1-2](https://huggingface.co/learn/deep-rl-course/en/unit1/introduction) - Q-Learning implementation
-- 🎯 [OpenAI Gym Tutorial](https://gymnasium.farama.org/tutorials/gymnasium_basics/) - Environment setup
+**Primary Resources**:
+
+- ⭐ [CS234 Lecture 4](https://web.stanford.edu/class/cs234/slides/cs234_lecture4.pdf), [Sutton & Barto Ch 4 & 6.5](http://incompleteideas.net/book/RLbook2020.pdf#page=89), [Q-Learning Paper](https://link.springer.com/content/pdf/10.1007/BF00992698.pdf)
+
+**Implementation & Code**:
+
+- [HuggingFace Deep RL Units 1-2](https://huggingface.co/learn/deep-rl-course/en/unit1/introduction), [CleanRL Q-Learning](https://github.com/vwxyzjn/cleanrl), [Stable Baselines3 DQN](https://stable-baselines3.readthedocs.io/)
+
+**Environments & Practice**:
+
+- [OpenAI Gym Tutorial](https://gymnasium.farama.org/tutorials/gymnasium_basics/), [FrozenLake Examples](https://github.com/openai/gym/wiki/FrozenLake-v0), [Grid World Demos](https://cs.stanford.edu/people/karpathy/reinforcejs/)
+
+**Mathematical Foundations**:
+
+- [Bertsekas DP](http://www.athenasc.com/dpchapter.pdf), [Szepesvári Algorithms](https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf), [RL Theory Ch 4](https://rltheorybook.github.io/)
 
 **⏰ Time Allocation**:
 
@@ -127,11 +151,21 @@
 **🎯 Target**: Cluster 2.2 - Temporal Difference Learning + Cluster 4.4 - PPO Introduction  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [Sutton & Barto Chapter 6.1-6.3](http://incompleteideas.net/book/RLbook2020.pdf#page=129) - TD Learning foundations
-- ⭐ [David Silver TD Learning](https://www.youtube.com/watch?v=0g4j2k_Ggc4) - Clear explanations
-- ⭐ [PPO Paper](https://arxiv.org/pdf/1707.06347.pdf) - Original algorithm
-- 🛠️ [37 PPO Implementation Details](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/) - Practical insights
-- 🛠️ [CleanRL PPO](https://github.com/vwxyzjn/cleanrl/blob/master/cleanrl/ppo.py) - Reference implementation
+**Primary Resources**:
+
+- ⭐ [Sutton & Barto Ch 6.1-6.3](http://incompleteideas.net/book/RLbook2020.pdf#page=129), [CS234 TD Learning](https://web.stanford.edu/class/cs234/slides/cs234_lecture5.pdf), [PPO Paper](https://arxiv.org/pdf/1707.06347.pdf)
+
+**Policy Gradient Foundations**:
+
+- [Policy Gradient Theorem](https://proceedings.neurips.cc/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf), [A3C Paper](https://arxiv.org/abs/1602.01783), [REINFORCE Algorithm](https://link.springer.com/article/10.1007/BF00992696)
+
+**Implementation & Practical**:
+
+- [37 PPO Implementation Details](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/), [CleanRL PPO](https://github.com/vwxyzjn/cleanrl/blob/master/cleanrl/ppo.py), [Stable Baselines3 PPO](https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html)
+
+**Videos & Theory**:
+
+- 🎥 [David Silver TD Learning](https://www.youtube.com/watch?v=0g4j2k_Ggc4), [CS285 Policy Gradients](https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-5.pdf), [Spinning Up PPO](https://spinningup.openai.com/en/latest/algorithms/ppo.html)
 
 **⏰ Time Allocation**:
 
@@ -155,11 +189,21 @@
 **🎯 Target**: Cluster 5.1 - Attention Mechanisms (Foundational)  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) - Revolutionary paper (Focus: Sections 1-3.2)
-- ⭐ [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - Visual guide to attention
-- 🎥 [3Blue1Brown - Attention in transformers](https://www.youtube.com/watch?v=eMlx5fFNoYc) - Visual intuition (13 min)
-- 📄 [CS336 Attention Lecture](https://stanford-cs336.github.io/spring2025/) - Modern perspective
-- 🛠️ [Attention from Scratch Tutorial](https://peterbloem.nl/blog/transformers) - Implementation basics
+**Primary Resources**:
+
+- ⭐ [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf), [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/), [CS336 Attention Lecture](https://stanford-cs336.github.io/spring2025/)
+
+**Implementation & Code**:
+
+- [Attention from Scratch Tutorial](https://peterbloem.nl/blog/transformers), [nanoGPT](https://github.com/karpathy/nanoGPT), [Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/)
+
+**Videos & Visual Learning**:
+
+- 🎥 [3Blue1Brown Attention](https://www.youtube.com/watch?v=eMlx5fFNoYc), [Karpathy GPT from Scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY), [CS25 Transformers](https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM)
+
+**Mathematical Foundations**:
+
+- [Deep Learning Book Ch 10](https://www.deeplearningbook.org/contents/rnn.html), [Mathematics for ML](https://mml-book.github.io/), [Linear Algebra Review](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
 
 **⏰ Time Allocation**:
 
@@ -181,11 +225,21 @@
 **🎯 Target**: Cluster 5.2 - Transformer Architecture (Complete)  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) - Complete architecture (Sections 3.3-4)
-- ⭐ [Let's build GPT: from scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY) - Karpathy implementation (1h 57m)
-- 🛠️ [nanoGPT](https://github.com/karpathy/nanoGPT) - Minimal implementation reference
-- 📄 [CS336 Transformer Materials](https://stanford-cs336.github.io/spring2025/) - Implementation details
-- 🎯 [Transformer Math Walkthrough](https://nlp.seas.harvard.edu/annotated-transformer/) - Annotated implementation
+**Primary Resources**:
+
+- ⭐ [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf), [CS336 Transformer Materials](https://stanford-cs336.github.io/spring2025/), [GPT-1 Paper](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
+
+**Implementation & Code**:
+
+- [nanoGPT](https://github.com/karpathy/nanoGPT), [Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/), [x-transformers](https://github.com/lucidrains/x-transformers)
+
+**Videos & Deep Dives**:
+
+- 🎥 [Karpathy GPT from Scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY), [CS25 Stanford Transformers](https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM), [HuggingFace Transformers Course](https://huggingface.co/learn/nlp-course/chapter1/1)
+
+**Architecture & Frameworks**:
+
+- [HuggingFace Transformers](https://huggingface.co/docs/transformers/index), [PyTorch Transformer](https://pytorch.org/docs/stable/generated/torch.nn.Transformer.html), [TensorFlow Transformer](https://www.tensorflow.org/text/tutorials/transformer)
 
 **⏰ Time Allocation**:
 
@@ -207,12 +261,21 @@
 **🎯 Target**: Cluster 5.3 - Language Modeling + Cluster 5.4 - Tokenization  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [GPT-1 Paper](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) - Foundation
-- ⭐ [CS336 Language Modeling](https://stanford-cs336.github.io/spring2025/) - Modern approach
-- ⭐ [BPE Paper](https://arxiv.org/pdf/1508.07909.pdf) - Foundational tokenization method
-- ⭐ [SentencePiece Paper](https://arxiv.org/pdf/1808.06226.pdf) - Modern approach
-- 🛠️ [Tokenization Tutorial](https://huggingface.co/learn/nlp-course/chapter6/1) - Practical implementation
-- 🎥 [Karpathy Neural Networks Course](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) - From scratch approach
+**Primary Resources**:
+
+- ⭐ [GPT-1 Paper](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf), [CS336 Language Modeling](https://stanford-cs336.github.io/spring2025/), [GPT-2 Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+
+**Tokenization Deep Dive**:
+
+- [BPE Paper](https://arxiv.org/pdf/1508.07909.pdf), [SentencePiece Paper](https://arxiv.org/pdf/1808.06226.pdf), [WordPiece Paper](https://arxiv.org/abs/1609.08144)
+
+**Implementation & Practice**:
+
+- [HuggingFace Tokenization](https://huggingface.co/learn/nlp-course/chapter6/1), [tiktoken](https://github.com/openai/tiktoken), [sentencepiece](https://github.com/google/sentencepiece)
+
+**Videos & Tutorials**:
+
+- 🎥 [Karpathy Neural Networks](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ), [Let's build GPT tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE), [NLP Course Videos](https://huggingface.co/learn/nlp-course/chapter1/1)
 
 **⏰ Time Allocation**:
 
@@ -234,12 +297,25 @@
 **🎯 Target**: Advanced Architectures + Scaling Preparation for RLHF  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [Scaling Laws Paper](https://arxiv.org/pdf/2001.08361.pdf) - Original research
-- ⭐ [Chinchilla Paper](https://arxiv.org/pdf/2203.15556.pdf) - Compute-optimal scaling
-- ⭐ [LLaMA Paper](https://arxiv.org/pdf/2302.13971.pdf) - Architectural innovations
-- 📄 [Emergent Abilities](https://arxiv.org/pdf/2206.07682.pdf) - Capability emergence
-- 🛠️ [HuggingFace Transformers](https://huggingface.co/docs/transformers/index) - Practical model usage
-- 📚 [State of GPT](https://www.youtube.com/watch?v=bZQun8Y4L2A) - Karpathy overview
+**Primary Resources**:
+
+- ⭐ [Scaling Laws Paper](https://arxiv.org/pdf/2001.08361.pdf), [Chinchilla Paper](https://arxiv.org/pdf/2203.15556.pdf), [LLaMA Paper](https://arxiv.org/pdf/2302.13971.pdf)
+
+**Advanced Architecture**:
+
+- [GPT-3 Paper](https://arxiv.org/abs/2005.14165), [PaLM Paper](https://arxiv.org/abs/2204.02311), [LLaMA 2 Paper](https://arxiv.org/pdf/2307.09288.pdf)
+
+**Scaling & Emergence**:
+
+- [Emergent Abilities](https://arxiv.org/pdf/2206.07682.pdf), [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556), [Grokking](https://arxiv.org/abs/2201.02177)
+
+**Implementation & Tools**:
+
+- [HuggingFace Transformers](https://huggingface.co/docs/transformers/index), [vLLM](https://github.com/vllm-project/vllm), [Weights & Biases LLM Course](https://www.wandb.courses/courses/training-fine-tuning-LLMs)
+
+**Videos & Overview**:
+
+- 🎥 [State of GPT](https://www.youtube.com/watch?v=bZQun8Y4L2A), [CS336 Scaling](https://stanford-cs336.github.io/spring2025/), [Full Stack LLM Bootcamp](https://fullstackdeeplearning.com/llm-bootcamp/)
 
 **⏰ Time Allocation**:
 
@@ -263,11 +339,21 @@
 **🎯 Target**: Cluster 6.1 - Human Preference Learning (Foundation)  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [InstructGPT Paper](https://arxiv.org/pdf/2203.02155.pdf) - RLHF foundation
-- ⭐ [RLHF Blog Post](https://huggingface.co/blog/rlhf) - Practical overview
-- 📄 [CMU RLHF 101 Tutorial](https://sites.google.com/andrew.cmu.edu/rlhf-tutorial/home) - 2025 comprehensive guide
-- 🎥 [Anthropic RLHF Explainer](https://www.anthropic.com/research/rlhf) - Constitutional AI perspective
-- 🛠️ [TRL Library](https://github.com/huggingface/trl) - Practical RLHF tools
+**Primary Resources**:
+
+- ⭐ [InstructGPT Paper](https://arxiv.org/pdf/2203.02155.pdf), [RLHF Blog Post](https://huggingface.co/blog/rlhf), [Bradley-Terry Model](https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model)
+
+**Foundations & Theory**:
+
+- [Preference Learning Survey](https://arxiv.org/pdf/2401.01045.pdf), [Learning to Rank](https://link.springer.com/book/10.1007/978-3-642-14267-3), [Reward Modeling](https://arxiv.org/abs/1909.08593)
+
+**Implementation & Tools**:
+
+- [TRL Library](https://github.com/huggingface/trl), [OpenAssistant](https://github.com/LAION-AI/Open-Assistant), [trlx](https://github.com/CarperAI/trlx)
+
+**Videos & Tutorials**:
+
+- 🎥 [CMU RLHF Tutorial](https://sites.google.com/andrew.cmu.edu/rlhf-tutorial/home), [Anthropic RLHF Research](https://www.anthropic.com/research), [WandB RLHF Course](https://wandb.ai/carperai/summarize_RLHF/reports/Implementing-RLHF-Learning-to-Summarize-with-Human-Feedback--VmlldzozMzAwOTB1)
 
 **⏰ Time Allocation**:
 
@@ -289,11 +375,21 @@
 **🎯 Target**: Cluster 6.2 - PPO for Language Models  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [InstructGPT Technical Details](https://arxiv.org/pdf/2203.02155.pdf) - Implementation specifics
-- ⭐ [TRL Library](https://github.com/huggingface/trl) - Practical tools
-- 🛠️ [RLHF Tutorial](https://wandb.ai/carperai/summarize_RLHF/reports/Implementing-RLHF-Learning-to-Summarize-with-Human-Feedback--VmlldzozMzAwOTB1) - Step-by-step
-- 📄 [37 PPO Implementation Details](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/) - Critical insights
-- 🎯 [OpenAssistant](https://github.com/LAION-AI/Open-Assistant) - Open-source implementation
+**Primary Resources**:
+
+- ⭐ [InstructGPT Technical Details](https://arxiv.org/pdf/2203.02155.pdf), [PPO Paper](https://arxiv.org/pdf/1707.06347.pdf), [WebGPT Paper](https://arxiv.org/abs/2112.09332)
+
+**RLHF Implementation**:
+
+- [TRL Library](https://github.com/huggingface/trl), [trlx](https://github.com/CarperAI/trlx), [OpenAssistant](https://github.com/LAION-AI/Open-Assistant)
+
+**PPO for Text Generation**:
+
+- [37 PPO Implementation Details](https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/), [CleanRL PPO](https://github.com/vwxyzjn/cleanrl/blob/master/cleanrl/ppo.py), [KL Penalty Analysis](https://arxiv.org/abs/1909.08593)
+
+**Tutorials & Practice**:
+
+- [WandB RLHF Tutorial](https://wandb.ai/carperai/summarize_RLHF/reports/Implementing-RLHF-Learning-to-Summarize-with-Human-Feedback--VmlldzozMzAwOTB1), [HuggingFace RLHF Course](https://huggingface.co/blog/rlhf), [Spinning Up RLHF](https://spinningup.openai.com/)
 
 **⏰ Time Allocation**:
 
@@ -315,12 +411,25 @@
 **🎯 Target**: Cluster 6.3 - Constitutional AI + Cluster 6.4 - Advanced Preference Methods  
 **📚 Materials to Upload to NotebookLM**:
 
-- ⭐ [Constitutional AI Paper](https://arxiv.org/pdf/2212.08073.pdf) - Complete method
-- ⭐ [DPO Paper](https://arxiv.org/pdf/2305.18290.pdf) - Breakthrough method
-- ⭐ [SimPO Paper](https://arxiv.org/abs/2405.14734) - Princeton 2025, latest advancement
-- 📄 [IPO Paper](https://arxiv.org/pdf/2310.12036.pdf) - Alternative approach
-- 📚 [Preference Optimization Survey](https://arxiv.org/pdf/2401.01045.pdf) - Complete overview
-- 🛠️ [Anthropic Safety Research](https://www.anthropic.com/research) - Latest developments
+**Primary Resources**:
+
+- ⭐ [Constitutional AI Paper](https://arxiv.org/pdf/2212.08073.pdf), [DPO Paper](https://arxiv.org/pdf/2305.18290.pdf), [SimPO Paper](https://arxiv.org/abs/2405.14734)
+
+**Advanced Preference Methods**:
+
+- [IPO Paper](https://arxiv.org/pdf/2310.12036.pdf), [CPO Paper](https://arxiv.org/abs/2401.08417), [KTO Paper](https://arxiv.org/abs/2402.01306)
+
+**Surveys & Foundations**:
+
+- [Preference Optimization Survey](https://arxiv.org/pdf/2401.01045.pdf), [AI Alignment Survey](https://arxiv.org/abs/2209.00626), [Safety Research Overview](https://www.anthropic.com/research)
+
+**Implementation & Tools**:
+
+- [DPO Implementation](https://github.com/eric-mitchell/direct-preference-optimization), [TRL DPO](https://huggingface.co/docs/trl/dpo_trainer), [Anthropic Constitutional AI](https://github.com/anthropics/ConstitutionalAI)
+
+**Safety & Alignment**:
+
+- [Center for AI Safety](https://www.safe.ai/), [OpenAI Alignment](https://openai.com/alignment/), [Anthropic Safety Research](https://www.anthropic.com/research)
 
 **⏰ Time Allocation**:
 
@@ -342,11 +451,25 @@
 **🎯 Target**: Integration Mastery + Future Directions  
 **📚 Materials to Upload to NotebookLM**:
 
-- 📄 Review all previous session materials
-- ⭐ [LLaMA 2 Paper](https://arxiv.org/pdf/2307.09288.pdf) - Modern RLHF at scale
-- 📚 [Anthropic Constitutional AI](https://arxiv.org/pdf/2212.08073.pdf) - Advanced safety
-- 🔮 [AI Alignment Research](https://www.safe.ai/) - Future directions
-- 🛠️ [Complete RLHF Implementation](https://github.com/CarperAI/trlx) - Production-ready tools
+**Integration & Modern Systems**:
+
+- ⭐ [LLaMA 2 Paper](https://arxiv.org/pdf/2307.09288.pdf), [Claude Paper](https://arxiv.org/abs/2212.08073), [GPT-4 Technical Report](https://arxiv.org/abs/2303.08774)
+
+**Production Systems**:
+
+- [Complete RLHF Implementation](https://github.com/CarperAI/trlx), [vLLM](https://github.com/vllm-project/vllm), [Text Generation Inference](https://github.com/huggingface/text-generation-inference)
+
+**Future Directions**:
+
+- [AI Alignment Research](https://www.safe.ai/), [Scalable Oversight](https://arxiv.org/abs/2211.03540), [Interpretability](https://transformer-circuits.pub/)
+
+**Research Frontiers**:
+
+- [Tool Learning](https://arxiv.org/abs/2304.08354), [Multimodal RLHF](https://arxiv.org/abs/2310.00892), [Constitutional AI Extensions](https://arxiv.org/abs/2212.08073)
+
+**Review Materials**:
+
+- All previous session materials for synthesis, [Comprehensive RLHF Survey](https://arxiv.org/pdf/2401.01045.pdf), [Modern AI Safety](https://www.anthropic.com/research)
 
 **⏰ Time Allocation**:
 
@@ -375,17 +498,17 @@
 
 ### **GenAI Track Blogs (Sessions 5-8)**
 
-5. **"The Attention Revolution: How AI Learned to Focus"** (Session 5 - Attention)
-6. **"Building Blocks of Language Models: Transformer Deep Dive"** (Session 6 - Architecture)
-7. **"Teaching Machines to Speak: Language Modeling Fundamentals"** (Session 7 - LM + Tokenization)
-8. **"The Mathematics of Intelligence: Understanding Scaling"** (Session 8 - Scaling Laws)
+1. **"The Attention Revolution: How AI Learned to Focus"** (Session 5 - Attention)
+2. **"Building Blocks of Language Models: Transformer Deep Dive"** (Session 6 - Architecture)
+3. **"Teaching Machines to Speak: Language Modeling Fundamentals"** (Session 7 - LM + Tokenization)
+4. **"The Mathematics of Intelligence: Understanding Scaling"** (Session 8 - Scaling Laws)
 
 ### **Convergence Track Blogs (Sessions 9-12)**
 
-9. **"Teaching AI Human Values: The RLHF Revolution"** (Session 9 - Preference Learning)
-10. **"RLHF in Practice: Training Language Models with PPO"** (Session 10 - PPO for LMs)
-11. **"Beyond RLHF: DPO, Constitutional AI, and the Future"** (Session 11 - Advanced Methods)
-12. **"RLHF Mastery: From Bellman Equations to Constitutional AI"** (Session 12 - Integration)
+1. **"Teaching AI Human Values: The RLHF Revolution"** (Session 9 - Preference Learning)
+2. **"RLHF in Practice: Training Language Models with PPO"** (Session 10 - PPO for LMs)
+3. **"Beyond RLHF: DPO, Constitutional AI, and the Future"** (Session 11 - Advanced Methods)
+4. **"RLHF Mastery: From Bellman Equations to Constitutional AI"** (Session 12 - Integration)
 
 ---
 
